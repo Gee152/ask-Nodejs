@@ -1,0 +1,25 @@
+<%- include("layouts/header.ejs")%>
+<body>
+    <%- include("layouts/navbar.ejs")%>
+    <div class="container">
+        <div class="card" id="form-pergunta">
+            <div class="card-header">
+                <h1>Realizar Perguntas</h1>
+            </div> 
+            <div class="card-body">
+               <form method="POST" action="/salvar">
+                    <label>Titulo</label>
+                    <input type="text" name="titulo" placeholder="Escreva sua pergunta" class="form-control" required>
+                    <label>Descrição</label>
+                    <textarea name="descricao" placeholder="Descreva sua pergunta aqui" class="form-control" required></textarea>
+                    <br>
+                    <button class="btn btn-success">Salvar</button>
+                    <a href="/" class="btn btn-success">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div> 
+</body>
+
+<%- include("layouts/footer.ejs")%>
+
